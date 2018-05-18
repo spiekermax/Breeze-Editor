@@ -1,0 +1,104 @@
+/* --META-- */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* --GENERAL-- */
+body {
+  margin: 0; padding: 0;
+}
+.unselectable {
+  user-select: none;
+  cursor: default;
+}
+
+/* --MAIN VIEW-- */
+#mainview {
+  /* Flexbox */
+  display: flex;
+  flex-direction: row;
+  /* Position */
+  position: absolute;
+  /* Size */
+  width: 100%;
+  height: calc(100% - 20px);
+}
+/* Project manager */
+#fileview {
+  z-index: 0;
+  padding: 10px;
+  /* Flexbox */
+  order: 0;
+  /* Size */
+  width: calc(192px - 20px);
+  height: calc(100% - 20px);
+  min-width: calc(192px - 20px);
+  max-width: 400px;
+  /* Appearance */
+  color: lightgray;
+  background-color: #1A1C1E;
+  font-family: Open Sans, monospace;
+  font-size: 12px;
+  /* Functionality */
+  overflow-y: auto;
+  overflow-x: auto;
+}
+#fileview-project-title {
+  font-size: 12px;
+  font-weight: bold;
+}
+#fileview-project-tree {
+  margin-top: 5px;
+  position: relative;
+  left: -8px;
+}
+/* Code editor */
+.CodeMirror {
+  z-index: 0;
+  /* Flexbox */
+  order: 1;
+  flex-grow: 1;
+  /* Size */
+  height: 100%;
+  /* Appearance */
+  font-family: Consolas, Source Code Pro, Monaco, Droid Sans Mono, Courier New, monospace;
+  font-size: 15px;
+  line-height: 19px;
+}
+#fileview-dragbar {
+  margin: -10px;
+  float: right;
+  height: calc(100% + 20px);
+  width: 3px;
+  cursor: col-resize;
+}
+
+/* --STATUS BAR-- */
+#statusbar {
+  z-index: 1;
+  padding: 2px;
+  /* Position */
+  position: absolute;
+  bottom: 0px;
+  /* Size */
+  width: calc(100% - 4px);
+  height: calc(20px - 4px);
+  /* Appearance */
+  color: lightgray;
+  background-color: #394551;
+  font-family: Open Sans, monospace;
+  font-size: 12px;
+}
+#statusbar-tabsize {
+  padding: 0px;
+  float:right;
+  height: 17px;
+  width: 20px;
+  color: lightgray;
+  background-color: #394551;
+  border: none;
+  vertical-align: middle;
+  font-size: 12px;
+}

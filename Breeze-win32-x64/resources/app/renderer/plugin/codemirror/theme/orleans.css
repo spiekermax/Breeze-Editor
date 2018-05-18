@@ -1,0 +1,44 @@
+.cm-s-orleans.CodeMirror {
+  background: #26292C;
+  color: rgba(233, 237, 237, 1);
+}
+.cm-s-orleans .CodeMirror-gutters {
+  background: #26292C;
+  color: rgb(83,127,126);
+  border: none;
+}
+.cm-s-orleans .box pre       { color: white; } 
+.cm-s-orleans .CodeMirror-guttermarker, .cm-s-orleans .CodeMirror-guttermarker-subtle, .cm-s-orleans .CodeMirror-linenumber { color: #505050; }
+.cm-s-orleans .CodeMirror-cursor { border-left: 1px solid #f8f8f0; }
+.cm-s-orleans div.CodeMirror-selected { background: rgba(255, 255, 255, 0.15); }
+.cm-s-orleans.CodeMirror-focused div.CodeMirror-selected { background: rgba(255, 255, 255, 0.10); }
+.cm-s-orleans .CodeMirror-line::selection, .cm-s-orleans .CodeMirror-line > span::selection, .cm-s-orleans .CodeMirror-line > span > span::selection { background: rgba(255, 255, 255, 0.10); }
+.cm-s-orleans .CodeMirror-line::-moz-selection, .cm-s-orleans .CodeMirror-line > span::-moz-selection, .cm-s-orleans .CodeMirror-line > span > span::-moz-selection { background: rgba(255, 255, 255, 0.10); }
+
+.cm-s-orleans .CodeMirror-activeline-background { background: green; }
+.cm-s-orleans .cm-keyword { color: #6394C2; } /* class for while if ... */
+.cm-s-orleans .cm-operator { color: #3d8985; } /* < > = ... */
+.cm-s-orleans .cm-variable-2 { color: red; } /* Not used? */
+.cm-s-orleans .cm-variable-3, .cm-s-orleans .cm-type { color: #6394C2; } /* int double char ... */
+.cm-s-orleans .cm-builtin { color: red; } /* Not used? */
+.cm-s-orleans .cm-atom { color: #de935f; } /* Not used? */
+.cm-s-orleans .cm-number { color: #C2563F; } /* 123 */
+.cm-s-orleans .cm-def { color: #EEC761; } /* class X */
+.cm-s-orleans .cm-string { color: #9DA55B; } /* "String" */
+.cm-s-orleans .cm-string-2 { color: red; }  /* Not used? */
+.cm-s-orleans .cm-comment { color: #808080; } /* Me ;) */
+.cm-s-orleans .cm-variable { color: #A2B1BF; } /* Everything reused */
+.cm-s-orleans .cm-tag { color: red; } /* Not used? */
+.cm-s-orleans .cm-meta { color: #B193BE; } /* #include */
+.cm-s-orleans .cm-attribute { color: red; } /* Not used? */
+.cm-s-orleans .cm-property { color: red; } /* Not used? */
+.cm-s-orleans .cm-qualifier { color: red; } /* Not used? */
+.cm-s-orleans .cm-tag { color: red; } /* Not used? */
+.cm-s-orleans .cm-error {
+  color: rgba(255, 255, 255, 1.0);
+  background-color: #EC5F67;
+}
+.cm-s-orleans .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}

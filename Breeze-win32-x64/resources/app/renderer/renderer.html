@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+
+<!-- >>HEADER<< -->
+<head>
+  <!-- *META* -->
+  <title>Breeze Editor</title>
+  <meta charset="utf-8">
+
+  <!-- *DEPENDENCIES* -->
+  <!-- Jquery -->
+  <script type="text/javascript" src="plugin/jquery/jquery-3.3.1.min.js"></script>
+  <script>window.$ = window.jQuery = require('jquery');</script>
+  <!-- Codemirror editor -->
+  <link rel="stylesheet" type="text/css" href="plugin/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" type="text/css" href="plugin/codemirror/theme/material.css">
+  <link rel="stylesheet" type="text/css" href="plugin/codemirror/theme/orleans.css">
+  <link rel="stylesheet" type="text/css" href="plugin/codemirror/addon/hint/show-hint.css">
+  <link rel="stylesheet" type="text/css" href="plugin/codemirror/addon/scroll/simplescrollbars.css">
+  <!-- Jstree -->
+  <link rel="stylesheet" type="text/css" href="plugin/jstree/dist/themes/default/style.css">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="source/renderer.css">
+</head>
+
+<!-- >>BODY<< -->
+<body onload="onDocumentReady()">
+  <!-- Mainview -->
+  <div id="mainview">
+    <!-- Project manager -->
+    <div id="fileview">
+      <!-- Dragbar for resizable -->
+      <div id="fileview-dragbar"></div>
+      <!-- Treeview -->
+      <div id="fileview-project">
+        <div id="fileview-project-title"></div>
+        <div id="fileview-project-tree">
+        </div>
+      </div>
+    </div>
+    <!-- Codemirror editor -->
+    <textarea class="editor"></textarea>
+  </div>
+  
+  <!-- Statusbar -->
+  <div id="statusbar">
+    <!-- Left side -->
+  	<div style="position:absolute; text-align:left; left:10px;">
+      <div id="statusbar-line" style="float:left">Line 1,</div>
+      <div id="statusbar-column" style="float:right">&nbspColumn 1</div>
+  	</div>
+    <!-- Right side -->
+  	<div style="position:absolute; text-align:right; right:10px;">
+      <!-- Tabsize -->
+      <div style="float:left; padding:0px 25px;">
+        <div class="unselectable", style="float:left">Spaces:&nbsp</div>
+  		<input type="number", id="statusbar-tabsize", value="2", oninput="onTabsizeEdit()", maxlength="1" />
+      </div>
+      <!-- Language -->
+      <div style="float:right; padding: 0px 25px;">C++</div>
+  	</div>
+  </div>
+
+  <!-- *DEPENDENCIES* -->
+  <!-- Codemirror editor -->
+  <script type="text/javascript" src="plugin/codemirror/lib/codemirror.js"></script>
+  <script type="text/javascript" src="plugin/codemirror/mode/clike/clike.js"></script>
+  <script type="text/javascript" src="plugin/codemirror/addon/edit/closetag.js"></script>
+  <script type="text/javascript" src="plugin/codemirror/addon/edit/closebrackets.js"></script>
+  <script type="text/javascript" src="plugin/codemirror/addon/hint/show-hint.js"></script>
+  <script type="text/javascript" src="plugin/codemirror/addon/scroll/simplescrollbars.js"></script>
+  <!-- Jstree -->
+  <script src="plugin/jstree/dist/jstree.min.js"></script>
+  <!-- Scripts -->
+  <script type="text/javascript" src="source/renderer.js"></script>
+</body>
+
+</html>

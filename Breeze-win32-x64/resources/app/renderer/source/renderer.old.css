@@ -1,0 +1,100 @@
+/* --META-- */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+/* --GENERAL-- */
+body {
+  margin: 0; padding: 0;
+}
+
+.unselectable {
+  user-select: none;
+  cursor: default;
+}
+
+#maincontent {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 20px);
+}
+
+/* --CODE EDITOR-- */
+.CodeMirror {
+  z-index: 0;
+  /* Position */
+  position: absolute;
+  float: left;
+  /*right: 0px;*/
+  /* Size */
+  /*width: calc(100% - 192px);*/
+  height: calc(100% - 20px);
+  /* Appearance */
+  font-family: Consolas, Source Code Pro, Monaco, Droid Sans Mono, Courier New, monospace;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+/* --PROJECT MANAGER-- */
+#projectmng {
+  z-index: 0;
+  padding: 10px;
+  /* Position */
+  position: absolute;
+  left: 0px;
+  /* Size */
+  width: calc(192px - 20px);
+  height: calc(100% - 40px);
+  /* Appearance */
+  color: lightgray;
+  background-color: #1A1C1E;
+  font-family: Open Sans, monospace;
+  font-size: 12px;
+  overflow-y: auto;
+  overflow-x: auto;
+  resize: horizontal;
+}
+#projectmng-files,
+#projectmng-project-title {
+  font-size: 12px;
+  font-weight: bold;
+}
+#projectmng-files-list {
+  font-size: 12px;
+  font-weight: normal;
+}
+#projectmng-project-tree {
+  margin-top: 5px;
+  position: absolute;
+  left: 2px;
+}
+
+/* --STATUS BAR-- */
+#statusbar {
+  z-index: 1;
+  padding: 2px;
+  /* Position */
+  position: absolute;
+  bottom: 0px;
+  /* Size */
+  width: calc(100% - 4px);
+  height: calc(20px - 4px);
+  /* Appearance */
+  color: lightgray;
+  background-color: #394551;
+  font-family: Open Sans, monospace;
+  font-size: 12px;
+}
+#statusbar-tabsize {
+  padding: 0px;
+  float:right;
+  height: 17px;
+  width: 20px;
+  color: lightgray;
+  background-color: #394551;
+  border: none;
+  vertical-align: middle;
+  font-size: 12px;
+}
